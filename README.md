@@ -26,4 +26,4 @@ The public site is separate from the private firmware. No software source licens
 
 This project is independent of the IOC and ISSF and is not an official Olympic or ISSF product.
 
-**Artwork notice:** The START banner is supplied for use on this project site; the concept illustration is separate.
+**Artwork notice:** `assets/start-banner.webp` is the supplied START banner. `assets/holder-guide.webp` is the user-supplied English DIY cardboard-holder infographic, shown on HOME and at full size on BUILD. The old concept illustration is no longer used.
