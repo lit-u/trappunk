@@ -17,12 +17,15 @@ h1,h2,h3,p{margin-top:0}h1{font-size:clamp(2.65rem,5.5vw,5rem);line-height:1.06;
 
 .home-banner{padding-top:32px}.home-banner img{display:block;width:100%;max-width:100%;height:auto;object-fit:contain;background:#000;border:1px solid #344e61;border-radius:10px;box-shadow:0 12px 42px #0008}.home-banner .small{text-align:right;margin:6px 0 0}.hero{padding-top:42px}
 
-/* User-provided English cardboard holder guide */
-.holder-preview{max-height:490px;display:grid;place-items:center;background:#071826}
-.holder-preview a{display:block;text-align:center;width:100%;line-height:0}
-.holder-preview img{height:auto;max-height:490px;width:auto;max-width:100%;margin:0 auto;object-fit:contain}
+
+/* Homepage: full-width guide below the introduction, no squeezed sidebar */
+.hero{display:block;max-width:900px;padding-bottom:42px}
+.holder-section{padding-top:38px;padding-bottom:58px}
+.holder-feature{max-width:900px;margin:0 auto;background:#081b27;border:1px solid #345468;border-radius:14px;overflow:hidden;box-shadow:0 12px 34px #0005}
+.holder-feature a{display:block;line-height:0}
+.holder-feature img{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+.holder-link{max-width:900px;margin:12px auto 0}
 .build-guide{max-width:870px;margin:0 auto;background:#081b27;border:1px solid #345468;border-radius:14px;overflow:hidden;box-shadow:0 12px 34px #0005}
 .build-guide img{display:block;width:100%;height:auto}
 .guide-caption{max-width:870px;margin:12px auto 0}
-@media(max-width:900px){.holder-preview,.holder-preview img{max-height:450px}}
-@media(max-width:580px){.holder-preview,.holder-preview img{max-height:400px}}
+@media(max-width:900px){.hero{max-width:100%}.holder-feature{max-width:100%}}
