@@ -26,4 +26,4 @@ The public site is separate from the private firmware. No software source licens
 
 This project is independent of the IOC and ISSF and is not an official Olympic or ISSF product.
 
-**Artwork notice:** The website currently uses original concept artwork, not the actual shooter photograph from the private START screen. Replace it after obtaining a usable copy of that image.
+**Artwork notice:** The START banner is supplied for use on this project site; the concept illustration is separate.
