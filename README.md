@@ -19,9 +19,11 @@ Once GitHub Pages is enabled: https://lit-u.github.io/trappunk/
 Enable **Settings → General → Features → Discussions** in this repository. Then the community link will open https://github.com/lit-u/trappunk/discussions.
 
 ## GitHub Pages
-Open **Settings → Pages** and choose **GitHub Actions** as the deployment source. The provided `.github/workflows/pages.yml` publishes the static site.
+Open **Settings → Pages**. Choose **Deploy from a branch**, then select **main** and **/(root)** and save. All pages are static HTML/CSS, so no GitHub Actions workflow is needed.
 
 ## Source code and licensing
 The public site is separate from the private firmware. No software source license has been granted for the firmware. Do not distribute firmware or claim a verified Web Installer until a tested release is available.
 
 This project is independent of the IOC and ISSF and is not an official Olympic or ISSF product.
+
+**Artwork notice:** The website currently uses original concept artwork, not the actual shooter photograph from the private START screen. Replace it after obtaining a usable copy of that image.
