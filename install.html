@@ -1,6 +1,51 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#09131d"><meta name="description" content="Plan for one-click browser firmware installation. No untested firmware is published."><title>Install TRAPPUNK · TRAPPUNK</title><link rel="stylesheet" href="assets/site.css"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"></head><body><header><div class="wrap top"><a class="brand" href="index.html"><span class="brand-icon"></span>TRAP<strong>PUNK</strong></a><nav aria-label="Main menu"><a href="index.html">HOME</a><a href="install.html" aria-current="page">INSTALL</a><a href="build.html">BUILD</a><a href="coach.html">COACH</a><a href="community.html">DISCUSSIONS</a></nav></div></header><main class="wrap">
-<section class="page-intro"><p class="eyebrow">INSTALL</p><h1>USB cable.<br><em>No coding.</em></h1><p class="lead">Our target is simple: buy the Waveshare ESP32-S3 Touch LCD 3.49B <strong>V2 (Rev1.1)</strong>, connect it by USB and install the firmware directly from your browser.</p></section>
-<div class="notice"><strong>Not available yet.</strong> The public firmware installer is deliberately disabled until a stable BIN has been tested on the V2 (Rev1.1) board. The site does not currently flash a board.</div>
-<section class="section"><div class="cards two"><div class="card"><p class="number">HARDWARE</p><h3>ESP32-S3 Touch LCD 3.49B — V2 only</h3><p>Waveshare 640 × 172 capacitive display with ESP32-S3 and integrated QMI8658 motion sensor. <strong>V1 is not supported.</strong></p><p><strong>Before buying, ask the seller:</strong> “Is this the V2 (Rev1.1) hardware revision of the Waveshare ESP32-S3 Touch LCD 3.49B?”</p><a href="build.html">Check the build guide →</a></div><div class="card"><p class="number">ONE-CLICK FLASH · PLANNED</p><h3>Install TRAPPUNK</h3><p>The future installer will use ESP Web Tools and a desktop Chromium-based browser that supports Web Serial.</p><p><span class="btn disabled" aria-disabled="true">INSTALL · COMING SOON</span></p><p class="small">No firmware image is published here yet.</p></div></div></section>
-<section class="section"><h2>How it will work</h2><div class="steps"><div class="step"><div><h3>Buy the V2 board</h3><p>Ask the seller to confirm V2 (Rev1.1) before ordering. The model name “3.49B” alone does not identify the revision.</p></div></div><div class="step"><div><h3>Connect via USB-C</h3><p>Use a data-capable cable and desktop Chrome or Edge.</p></div></div><div class="step"><div><h3>Verify the USB device and install</h3><p>The planned installer checks that the connected chip is an ESP32-S3, then flashes the V2 firmware. USB chip identification cannot confirm the board's V2 revision.</p></div></div><div class="step"><div><h3>Launch a test series</h3><p>Check the screen, touch input, motion sensor and trigger.</p></div></div></div><p class="note">Flashing may erase device settings and stored results. Back up important data before upgrading.</p></section>
-<section class="section"><p>Technical information: <a href="https://esphome.github.io/esp-web-tools/">ESP Web Tools</a>. For project progress, use the <a href="community.html">community page</a>.</p></section></main><footer class="footer"><div class="wrap foot"><div><strong>TRAPPUNK</strong> · Olympic Trap Gyro Simulator<br>Independent project, not affiliated with IOC or ISSF.</div><div class="links"><a href="https://github.com/lit-u/trappunk">GitHub</a><a href="https://github.com/lit-u/olympic-trap-coach-rag">Coach RAG</a><a href="community.html">Community</a></div></div></footer></body></html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#09131d"><meta name="description" content="USB installation for TRAPPUNK on Waveshare ESP32-S3 Touch LCD 3.49B V2 Rev1.1. First-install release candidate."><title>Install TRAPPUNK · TRAPPUNK</title><link rel="stylesheet" href="assets/site.css"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script><script src="assets/install.js" defer></script></head><body><header><div class="wrap top"><a class="brand" href="index.html"><span class="brand-icon"></span>TRAP<strong>PUNK</strong></a><nav aria-label="Main menu"><a href="index.html">HOME</a><a href="install.html" aria-current="page">INSTALL</a><a href="build.html">BUILD</a><a href="coach.html">COACH</a><a href="community.html">DISCUSSIONS</a></nav></div></header><main class="wrap">
+<section class="page-intro">
+<p class="eyebrow">INSTALL · V2 ONLY</p>
+<h1>Connect USB.<br><em>Install TRAPPUNK.</em></h1>
+<p class="lead">For the <strong>Waveshare ESP32-S3 Touch LCD 3.49B V2 (Rev1.1)</strong>. No coding tools or terminal commands required. Use a desktop computer with Chrome or Edge and a USB-C data cable.</p>
+<p class="small">Release candidate · TRAP12 · firmware 0.1.0-trap12-3bb0736a</p>
+</section>
+<div class="notice"><strong>First-install / recovery release.</strong> The image has passed GitHub compilation and integrity checks, but its first browser installation on a separate new V2 board has not yet been verified. Flashing may erase existing training records, settings and Wi-Fi configuration. Back up anything important.</div>
+<section class="section"><div class="cards two">
+<div class="card">
+<p class="number">STEP 01 · VERIFY HARDWARE</p>
+<h2>Your board must be V2.</h2>
+<p><strong>Supported:</strong> Waveshare ESP32-S3 Touch LCD 3.49B V2 (Rev1.1), 640 × 172, with QMI8658 motion sensor.</p>
+<p><strong>Before buying, ask the seller:</strong> “Is this the V2 (Rev1.1) hardware revision of the Waveshare ESP32-S3 Touch LCD 3.49B?”</p>
+<p>Model suffix <strong>3.49B</strong> identifies the case, not the hardware revision. V1 is not supported by this release.</p>
+<a href="build.html">Read the BUILD guide →</a>
+</div>
+<div class="card install-card">
+<p class="number">STEP 02 · USB INSTALL</p>
+<h2>Flash TRAPPUNK V2</h2>
+<p>Connect your board with a USB-C <strong>data</strong> cable. Confirm both statements to unlock the installer.</p>
+<label class="install-check"><input id="confirm-v2" type="checkbox"><span>I have confirmed that my Waveshare board is <strong>V2 (Rev1.1)</strong>.</span></label>
+<label class="install-check"><input id="confirm-backup" type="checkbox"><span>I have saved important training results and understand that installing may <strong>erase stored data</strong>.</span></label>
+<p id="install-gate-note" class="small">Confirm both boxes to activate the USB installer.</p>
+<div id="install-controls" class="installer-controls" hidden>
+<esp-web-install-button manifest="firmware/v2/manifest.json">
+<button slot="activate" class="btn primary">Install firmware via USB</button>
+<span slot="unsupported" class="small">Web Serial is unavailable in this browser. Use desktop Chrome or Edge over HTTPS.</span>
+<span slot="not-allowed" class="small">Browser installation requires HTTPS and permission to access your USB device.</span>
+</esp-web-install-button>
+</div>
+<p class="small">The installer detects ESP32-S3, not the PCB revision. Follow the confirmation above. You choose the USB port in the browser.</p>
+</div>
+</div></section>
+<section class="section">
+<p class="eyebrow">QUICK START</p>
+<h2>Three steps from box to first series</h2>
+<div class="steps">
+<div class="step"><div><h3>Get the correct V2 board</h3><p>Ask the seller to confirm V2 / Rev1.1. Older boards are not supported at this stage.</p></div></div>
+<div class="step"><div><h3>Connect it to your computer</h3><p>Open this page in Chrome or Edge on Windows, macOS or Linux, and use a USB data cable. Select the correct USB/serial port when prompted.</p></div></div>
+<div class="step"><div><h3>Install and test</h3><p>After flashing, disconnect and reconnect if needed. Check screen, touch, QMI8658 motion and a full 25-target session. Report problems in Discussions.</p></div></div>
+</div>
+</section>
+<section class="section">
+<h2>Advanced downloads</h2>
+<p>For technical users, the factory installation contains four binary files at different flash offsets. <strong>Do not flash `firmware.bin` alone at address 0.</strong></p>
+<p><a href="firmware/v2/manifest.json">ESP Web Tools manifest</a> · <a href="firmware/v2/firmware.bin" download>App image (firmware.bin)</a> · <a href="firmware/v2/SHA256SUMS.txt">SHA-256 checksums</a> · <a href="firmware/v2/RELEASE.md">Release notes and offsets</a></p>
+<p class="note">This is not yet a verified in-place updater. Keep a separate copy of your results before using any installation or recovery tool.</p>
+<p>Need help? Use the <a href="https://github.com/lit-u/trappunk/discussions">TRAPPUNK Discussions forum</a>.</p>
+</section>
+</main><footer class="footer"><div class="wrap foot"><div><strong>TRAPPUNK</strong> · Olympic Trap Gyro Simulator<br>Independent project, not affiliated with IOC or ISSF.</div><div class="links"><a href="https://github.com/lit-u/trappunk">GitHub</a><a href="https://github.com/lit-u/olympic-trap-coach-rag">Coach RAG</a><a href="community.html">Community</a></div></div></footer></body></html>

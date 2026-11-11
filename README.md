@@ -3,14 +3,14 @@
 
 Public project website for a low-cost, ESP32-S3-based Olympic Trap training simulator.
 
-**Status:** Preview website. The main firmware source remains in a separate private repository. Public firmware installation will be enabled only after the release binaries and both Waveshare board revisions have been tested.
+**Status:** Website public; first-install / recovery firmware release candidate for Waveshare V2 (Rev1.1) only. The firmware source remains private. Browser flashing has not been validated on a separate blank board. New installations may erase records.
 
 ## Website
 Once GitHub Pages is enabled: https://lit-u.github.io/trappunk/
 
 ## Pages
 - Home: `index.html`
-- Install: `install.html` (not yet active)
+- Install: `install.html` (V2-only first-install USB release candidate)
 - Build: `build.html`
 - Coach: `coach.html`
 - Community: `community.html`
@@ -22,8 +22,19 @@ Enable **Settings → General → Features → Discussions** in this repository.
 Open **Settings → Pages**. Choose **Deploy from a branch**, then select **main** and **/(root)** and save. All pages are static HTML/CSS, so no GitHub Actions workflow is needed.
 
 ## Source code and licensing
-The public site is separate from the private firmware. No software source license has been granted for the firmware. Do not distribute firmware or claim a verified Web Installer until a tested release is available.
+The public site is separate from the private firmware. No software source license has been granted for the firmware. The V2 build is published as a release candidate for factory installation/recovery, not as a verified data-preserving updater. No MIT source license has been granted.
 
 This project is independent of the IOC and ISSF and is not an official Olympic or ISSF product.
 
 **Artwork notice:** `assets/start-banner.webp` is the supplied START banner. `assets/holder-guide.webp` is the user-supplied English DIY cardboard-holder infographic, shown on HOME and at full size on BUILD. The old concept illustration is no longer used.
+
+## Firmware release candidate
+
+- Browser installation: [INSTALL](install.html)
+- Manifest: [V2 manifest](firmware/v2/manifest.json)
+- Source commit: `3bb0736a28da0b70b81700ccc85941b6d0411e7f`
+- Hardware: Waveshare 3.49B V2 / Rev1.1 only
+- Checksums: [SHA256SUMS](firmware/v2/SHA256SUMS.txt)
+- Notes: [RELEASE](firmware/v2/RELEASE.md)
+
+Compiled successfully in CI, but independent new-board browser flashing is not yet verified. A factory installation may erase stored results.

@@ -29,3 +29,11 @@ h1,h2,h3,p{margin-top:0}h1{font-size:clamp(2.65rem,5.5vw,5rem);line-height:1.06;
 .build-guide img{display:block;width:100%;height:auto}
 .guide-caption{max-width:870px;margin:12px auto 0}
 @media(max-width:900px){.hero{max-width:100%}.holder-feature{max-width:100%}}
+
+/* V2 USB installer */
+.install-check{display:flex;gap:12px;align-items:flex-start;margin:14px 0;padding:12px;border:1px solid #365365;background:#0d2130;border-radius:9px;line-height:1.4;cursor:pointer}
+.install-check input{flex:none;width:20px;height:20px;accent-color:var(--orange);margin:2px 0 0}
+.installer-controls{padding:14px 0 6px}
+.installer-controls[hidden]{display:none!important}
+.install-card esp-web-install-button{display:block;--esp-tools-button-color:#ff883f;--esp-tools-button-text-color:#17212a}
+.install-card esp-web-install-button .btn{font-family:inherit;font-size:1rem;cursor:pointer}
