@@ -37,3 +37,18 @@ h1,h2,h3,p{margin-top:0}h1{font-size:clamp(2.65rem,5.5vw,5rem);line-height:1.06;
 .installer-controls[hidden]{display:none!important}
 .install-card esp-web-install-button{display:block;--esp-tools-button-color:#ff883f;--esp-tools-button-text-color:#17212a}
 .install-card esp-web-install-button .btn{font-family:inherit;font-size:1rem;cursor:pointer}
+
+/* FAQ: native accessible HTML disclosure, no scripts or server needed */
+.faq-intro{max-width:860px}.faq-list-section{padding-top:20px}
+.faq-list{display:grid;gap:12px;max-width:980px}
+.faq-item{border:1px solid #355267;border-radius:12px;background:linear-gradient(115deg,#152d3d,#0e202e);overflow:hidden}
+.faq-item summary{display:flex;align-items:center;gap:17px;list-style:none;cursor:pointer;padding:19px 22px;color:#f1f5f7;font-weight:750;font-size:1.08rem;line-height:1.35}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";margin-left:auto;flex-shrink:0;color:var(--orange);font-size:1.7rem;font-weight:350;line-height:1;min-width:24px;text-align:center}
+.faq-item[open] summary::after{content:"−"}
+.faq-item summary:hover{background:#1a3749}
+.faq-item summary:focus-visible{outline:3px solid var(--orange);outline-offset:-3px}
+.faq-number{font-size:.75rem;color:var(--orange);font-weight:900;letter-spacing:.04em;flex-shrink:0}
+.faq-answer{padding:0 22px 17px 58px;color:#c6d5df}
+.faq-answer p{margin:0;max-width:800px}.faq-answer strong{color:#fff}
+@media(max-width:580px){.faq-item summary{padding:16px 13px;gap:10px;font-size:1rem}.faq-answer{padding:0 15px 18px 40px}}

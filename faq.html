@@ -1,0 +1,51 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#09131d"><meta name="description" content="Frequently asked questions about TRAPPUNK, Android gyroscopes, hardware, USB installation, training accuracy, results and open source."><title>FAQ · TRAPPUNK</title><link rel="stylesheet" href="assets/site.css"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"></head>
+<header><div class="wrap top"><a class="brand" href="index.html"><span class="brand-icon"></span>TRAP<strong>PUNK</strong></a><nav aria-label="Main menu"><a href="index.html" aria-current="page">HOME</a><a href="install.html">INSTALL</a><a href="build.html">BUILD</a><a href="coach.html">COACH</a><a href="faq.html" aria-current="page">FAQ</a><a href="community.html">DISCUSSIONS</a></nav></div></header><main class="wrap">
+<section class="page-intro faq-intro"><p class="eyebrow">FAQ · THE DETAILS</p><h1>Good questions.<br><em>Straight answers.</em></h1><p class="lead">What TRAPPUNK can do, what it cannot do, and what you actually need to build one. Select any question to expand the answer.</p></section>
+<section class="section faq-list-section" aria-label="Frequently asked questions">
+<!-- FAQ ITEMS START: To edit, change the question inside <summary> and its answer inside <div class="faq-answer">. Add more <details class="faq-item"> blocks here. -->
+<div class="faq-list">
+<details class="faq-item" id="faq-1">
+  <summary><span class="faq-number">01</span><span>Why not just make a mobile phone app?</span></summary>
+  <div class="faq-answer"><p>A mobile app is possible, but it is not automatically a better trainer. Some Android phones have no gyroscope, and sensor performance, screen size and grip vary between devices. A phone held in the hands also feels different from a dedicated training stock. TRAPPUNK uses one known ESP32-S3 board, so we can focus on consistent motion control and a simple trigger. A phone version may be explored later.</p></div>
+</details>
+<details class="faq-item" id="faq-2">
+  <summary><span class="faq-number">02</span><span>How do I know whether my Android or iPhone has a gyroscope?</span></summary>
+  <div class="faq-answer"><p>Check the exact model’s published sensor specifications for <strong>gyroscope</strong>, or use a trusted sensor-information app to see whether angular-velocity readings are available. Do not confuse a gyroscope with an accelerometer or compass. Many modern phones do have a gyro, especially iPhones, but not every Android model does. Having one still does not guarantee that TRAPPUNK firmware can run on the phone: it is designed for an ESP32 board.</p></div>
+</details>
+<details class="faq-item" id="faq-3">
+  <summary><span class="faq-number">03</span><span>What do I need to build TRAPPUNK, and how much does it cost?</span></summary>
+  <div class="faq-answer"><p>The supported core is a <strong>Waveshare ESP32-S3 Touch LCD 3.49B, hardware V2 (Rev1.1)</strong>, with the built-in QMI8658 motion sensor. You also need power, a holder or stock and, for a physical trigger, a momentary button. The board price varies by seller; allow roughly €20–35 for the board alone, plus parts and shipping. Ask the seller explicitly to confirm V2/Rev1.1 before ordering. <a href="build.html">See BUILD</a>.</p></div>
+</details>
+<details class="faq-item" id="faq-4">
+  <summary><span class="faq-number">04</span><span>Can someone with no programming experience install it?</span></summary>
+  <div class="faq-answer"><p>Yes. The <a href="install.html">INSTALL</a> page provides a USB browser installer for the supported V2 board. Use a desktop Chrome or Edge browser, a USB-C <em>data</em> cable and select the connected port when prompted. You do not need PlatformIO or coding knowledge. The installer detects the ESP32-S3 chip, but <strong>cannot automatically prove that the Waveshare board is V2</strong>. Confirm the revision before flashing.</p></div>
+</details>
+<details class="faq-item" id="faq-5">
+  <summary><span class="faq-number">05</span><span>Do I need Wi-Fi, a PC or an SD card to practise?</span></summary>
+  <div class="faq-answer"><p>No PC, Wi-Fi or cloud account is required for ordinary standalone practice after the firmware is installed. A computer and USB connection are used for browser installation and certain data-analysis workflows. A microSD card is optional for saving or exporting supported training data. The exact available export features depend on the firmware version.</p></div>
+</details>
+<details class="faq-item" id="faq-6">
+  <summary><span class="faq-number">06</span><span>Is it a real gun, and does it fire anything?</span></summary>
+  <div class="faq-answer"><p>No. It is a <strong>non-firing electronic shooting simulator</strong>: a display, motion sensor and virtual trigger. There is no projectile, cartridge or shot charge. A simple dedicated wooden or cardboard stock is sufficient for the DIY design. Never handle or attach the device to a loaded firearm.</p></div>
+</details>
+<details class="faq-item" id="faq-7">
+  <summary><span class="faq-number">07</span><span>How realistic are the clay flights and HIT/MISS results?</span></summary>
+  <div class="faq-answer"><p>TRAPPUNK simulates clay trajectories, gun orientation and virtual shot timing using a mathematical model. That can be useful for structured practice, but it is <strong>not a certified measurement of real-world hit probability</strong>. The clay aerodynamics, shot model and transfer to actual range performance have not been independently validated. Treat virtual scores as simulator scores, not as proof of competition accuracy.</p></div>
+</details>
+<details class="faq-item" id="faq-8">
+  <summary><span class="faq-number">08</span><span>What exactly does TRAP COACH analyse?</span></summary>
+  <div class="faq-answer"><p>Depending on the recorded session, TRAP COACH can display target and device-motion traces, movement onset, the time from visible clay to the first shot, first/second-shot timing and virtual hit/miss events. These are measurements within the simulator and its sensors. COACH cannot directly measure your eye movements, trigger pressure, real barrel path or live-range accuracy. <a href="coach.html">Explore COACH</a>.</p></div>
+</details>
+<details class="faq-item" id="faq-9">
+  <summary><span class="faq-number">09</span><span>Will reinstalling the firmware delete my results?</span></summary>
+  <div class="faq-answer"><p><strong>It can.</strong> Browser installation or recovery may erase flash memory, stored session records and settings. Export important results to the supported SD/COACH formats and keep an independent copy before flashing. Do not assume that a successful firmware install is a non-destructive update. <a href="install.html">Read the install warnings</a>.</p></div>
+</details>
+<details class="faq-item" id="faq-10">
+  <summary><span class="faq-number">10</span><span>Is TRAPPUNK open source? Can I help improve it?</span></summary>
+  <div class="faq-answer"><p>The <a href="https://github.com/lit-u/trappunk">website repository</a> and the <a href="https://github.com/lit-u/olympic-trap-coach-rag">Coach RAG knowledge base</a> are public. The main firmware source repository is still private; a public BIN download does <strong>not</strong> make that source open source or grant an MIT licence. You can already report bugs, suggest ideas and share experiments in <a href="https://github.com/lit-u/trappunk/discussions">GitHub Discussions</a>.</p></div>
+</details>
+</div>
+<!-- FAQ ITEMS END -->
+</section>
+<section class="section"><div class="card"><p class="eyebrow">HAVE ANOTHER QUESTION?</p><h2>Ask the community.</h2><p>The GitHub forum is open to readers without an account. A free GitHub account is needed to post questions or replies.</p><a class="btn primary" href="https://github.com/lit-u/trappunk/discussions">Open Discussions</a></div></section>
+</main><footer class="footer"><div class="wrap foot"><div><strong>TRAPPUNK</strong> · Olympic Trap Gyro Simulator<br>Independent project, not affiliated with IOC or ISSF.</div><div class="links"><a href="https://github.com/lit-u/trappunk">GitHub</a><a href="https://github.com/lit-u/olympic-trap-coach-rag">Coach RAG</a><a href="community.html">Community</a></div></div></footer></body></html>

@@ -13,6 +13,7 @@ Once GitHub Pages is enabled: https://lit-u.github.io/trappunk/
 - Install: `install.html` (V2-only first-install USB release candidate)
 - Build: `build.html`
 - Coach: `coach.html`
+- FAQ: `faq.html` — 10 expandable questions, no JavaScript required
 - Community: `community.html`
 
 ## Discussions
@@ -38,3 +39,7 @@ This project is independent of the IOC and ISSF and is not an official Olympic o
 - Notes: [RELEASE](firmware/v2/RELEASE.md)
 
 Compiled successfully in CI, but independent new-board browser flashing is not yet verified. A factory installation may erase stored results.
+
+## Edit FAQ questions
+
+Open [`faq.html`](faq.html) or the [GitHub editor](https://github.com/lit-u/trappunk/edit/main/faq.html). Find the section between `<!-- FAQ ITEMS START -->` and `<!-- FAQ ITEMS END -->`. Each question is inside `<summary>`, each answer is inside `<div class="faq-answer">`. Commit to `main` to publish the edits.
