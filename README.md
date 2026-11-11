@@ -31,12 +31,9 @@ This project is independent of the IOC and ISSF and is not an official Olympic o
 
 ## Firmware release candidate
 
-- Browser installation: [INSTALL](install.html)
-- Manifest: [V2 manifest](firmware/v2/manifest.json)
+- User-facing installation: [INSTALL](install.html) (no manual firmware downloads)
 - Source commit: `3bb0736a28da0b70b81700ccc85941b6d0411e7f`
 - Hardware: Waveshare 3.49B V2 / Rev1.1 only
-- Checksums: [SHA256SUMS](firmware/v2/SHA256SUMS.txt)
-- Notes: [RELEASE](firmware/v2/RELEASE.md)
 
 Compiled successfully in CI, but independent new-board browser flashing is not yet verified. A factory installation may erase stored results.
 

@@ -25,7 +25,7 @@
 <div id="install-controls" class="installer-controls" hidden>
 <esp-web-install-button manifest="firmware/v2/manifest.json">
 <button slot="activate" class="btn primary">Install firmware via USB</button>
-<span slot="unsupported" class="small">Web Serial is unavailable in this browser. Use desktop Chrome or Edge over HTTPS.</span>
+<span slot="unsupported" class="small">This browser cannot install firmware via USB. Safari is not supported. Use desktop Chrome or Edge over HTTPS.</span>
 <span slot="not-allowed" class="small">Browser installation requires HTTPS and permission to access your USB device.</span>
 </esp-web-install-button>
 </div>
@@ -41,11 +41,5 @@
 <div class="step"><div><h3>Install and test</h3><p>After flashing, disconnect and reconnect if needed. Check screen, touch, QMI8658 motion and a full 25-target session. Report problems in Discussions.</p></div></div>
 </div>
 </section>
-<section class="section">
-<h2>Advanced downloads</h2>
-<p>For technical users, the factory installation contains four binary files at different flash offsets. <strong>Do not flash `firmware.bin` alone at address 0.</strong></p>
-<p><a href="firmware/v2/manifest.json">ESP Web Tools manifest</a> · <a href="firmware/v2/firmware.bin" download>App image (firmware.bin)</a> · <a href="firmware/v2/SHA256SUMS.txt">SHA-256 checksums</a> · <a href="firmware/v2/RELEASE.md">Release notes and offsets</a></p>
-<p class="note">This is not yet a verified in-place updater. Keep a separate copy of your results before using any installation or recovery tool.</p>
-<p>Need help? Use the <a href="https://github.com/lit-u/trappunk/discussions">TRAPPUNK Discussions forum</a>.</p>
-</section>
+<section class="section"><h2>Need help?</h2><p>For installation questions, USB connection problems or suggestions, visit <a href="https://github.com/lit-u/trappunk/discussions">TRAPPUNK Discussions</a>.</p><p class="small">This USB installer works with browsers supporting Web Serial. Safari on macOS and browsers on iPhone/iPad are not supported; use Chrome or Edge on a desktop computer.</p></section>
 </main><footer class="footer"><div class="wrap foot"><div><strong>TRAPPUNK</strong> · Olympic Trap Gyro Simulator<br>Independent project, not affiliated with IOC or ISSF.</div><div class="links"><a href="https://github.com/lit-u/trappunk">GitHub</a><a href="https://github.com/lit-u/olympic-trap-coach-rag">Coach RAG</a><a href="community.html">Community</a></div></div></footer></body></html>
