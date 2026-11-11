@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720" role="img" aria-label="Illustration of a clay shooter and a flying orange target">
+<defs><linearGradient id="s" x2="0" y2="1"><stop stop-color="#102c42"/><stop offset=".75" stop-color="#4d849f"/><stop offset="1" stop-color="#a6a4a0"/></linearGradient><linearGradient id="c" x2="0" y2="1"><stop stop-color="#fca351"/><stop offset="1" stop-color="#ef5c21"/></linearGradient></defs>
+<rect width="900" height="720" fill="url(#s)"/><circle cx="714" cy="145" r="145" fill="#eead78" opacity=".10"/>
+<path d="M0 485Q200 458 395 478T900 462V720H0Z" fill="#254852"/><path d="M0 560Q140 540 265 555T900 540V720H0Z" fill="#18333c"/>
+<path d="M80 720V606Q90 578 134 558L254 503Q311 504 365 579L404 720Z" fill="#0d202a"/>
+<path d="M255 507Q275 469 276 435L331 420Q340 477 325 518Z" fill="#b88675"/>
+<path d="M238 340Q214 293 243 266Q283 224 338 248Q391 277 383 328L362 430Q348 467 304 463Q253 452 245 400Z" fill="#c18c79"/>
+<path d="M220 332Q201 279 238 249Q264 223 297 224Q362 218 385 275L387 314Q355 318 328 293Q286 321 235 321Z" fill="#101922"/>
+<path d="M220 341Q191 373 211 430Q217 454 192 472" stroke="#0e1b24" stroke-width="22" fill="none" stroke-linecap="round"/>
+<path d="M371 391Q414 374 458 390L497 413L466 466L395 437Z" fill="#172b38"/>
+<path d="M454 409Q531 406 583 347L601 362Q556 452 480 462Z" fill="#ba816b"/>
+<path d="M582 356L631 337" stroke="#b6816a" stroke-width="24" stroke-linecap="round"/>
+<path d="M623 330L788 280" stroke="#192027" stroke-width="15" stroke-linecap="round"/>
+<path d="M777 269L879 243" stroke="#090f13" stroke-width="7" stroke-linecap="round"/>
+<path d="M774 263L878 235" stroke="#2c4250" stroke-width="5" stroke-linecap="round"/>
+<path d="M626 327L760 285" stroke="#8e684e" stroke-width="11" stroke-linecap="round"/>
+<path d="M350 408L448 402" stroke="#5e4c43" stroke-width="15" stroke-linecap="round"/>
+<path d="M386 466Q435 457 473 483" stroke="#1b3341" stroke-width="36" fill="none" stroke-linecap="round"/>
+<g transform="translate(706 160) rotate(-15)"><ellipse cy="4" rx="28" ry="12" fill="#a83519"/><ellipse cy="-1" rx="28" ry="9" fill="url(#c)" stroke="#171c1c" stroke-width="2"/><ellipse cy="-1" rx="19" ry="5" fill="none" stroke="#ffc290" stroke-width="2"/></g>
+<g fill="none" stroke="#d9ecf5" stroke-width="1.8" opacity=".4"><circle cx="706" cy="160" r="77"/><circle cx="706" cy="160" r="107"/><path d="M706 40V74M706 257V286M583 160H620M796 160H831"/></g>
+<path d="M566 221L654 181M602 226L663 189" stroke="#ffa262" stroke-width="3.5" stroke-linecap="round" opacity=".65"/>
+<rect x="28" y="28" width="344" height="50" rx="5" fill="#06131ccc"/><text x="46" y="58" fill="#ffac70" font-family="Arial,sans-serif" font-size="21" font-weight="bold" letter-spacing="3">TRAPPUNK · PREVIEW</text><path d="M0 705H900" stroke="#ff883f" stroke-width="4"/></svg>
