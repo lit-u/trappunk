@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#09131d"><meta name="description" content="Frequently asked questions about TRAPPUNK, Android gyroscopes, hardware, USB installation, training accuracy, results and open source."><title>FAQ · TRAPPUNK</title><link rel="stylesheet" href="assets/site.css"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"></head>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#09131d"><meta name="description" content="Frequently asked questions about TRAPPUNK, Olympic Trap training, first-shot timing, C1/C2 and H1/H2 settings, hardware, installation and simulator results."><title>FAQ · TRAPPUNK</title><link rel="stylesheet" href="assets/site.css"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"></head>
 <header><div class="wrap top"><a class="brand" href="index.html"><span class="brand-icon"></span>TRAP<strong>PUNK</strong></a><nav aria-label="Main menu"><a href="index.html" aria-current="page">HOME</a><a href="install.html">INSTALL</a><a href="build.html">BUILD</a><a href="coach.html">COACH</a><a href="faq.html" aria-current="page">FAQ</a><a href="community.html">DISCUSSIONS</a></nav></div></header><main class="wrap">
 <section class="page-intro faq-intro"><p class="eyebrow">FAQ · THE DETAILS</p><h1>Good questions.<br><em>Straight answers.</em></h1><p class="lead">What TRAPPUNK can do, what it cannot do, and what you actually need to build one. Select any question to expand the answer.</p></section>
 <section class="section faq-list-section" aria-label="Frequently asked questions">
@@ -18,32 +18,39 @@
   </div>
 </details>
 <details class="faq-item" id="faq-3">
-  <summary><span class="faq-number">03</span><span>What do I need to build TRAPPUNK, and how much does it cost?</span></summary>
-  <div class="faq-answer"><p>The supported core is a <strong>Waveshare ESP32-S3 Touch LCD 3.49B, hardware V2 (Rev1.1)</strong>, with the built-in QMI8658 motion sensor. You also need power and a holder or stock. Shots are fired by tapping the touchscreen. The board price varies by seller; allow roughly €20–35 for the board alone, plus parts and shipping. Ask the seller explicitly to confirm V2/Rev1.1 before ordering. <a href="build.html">See BUILD</a>.</p></div>
+  <summary><span class="faq-number">03</span><span>What do I need to build TRAPPUNK, how much does it cost, and can I install it myself?</span></summary>
+  <div class="faq-answer"><p>The supported core is a <strong>Waveshare ESP32-S3 Touch LCD 3.49B, hardware V2 (Rev1.1)</strong>, with its onboard QMI8658 motion sensor. Add a power source and a comfortable cardboard, wooden or other dedicated holder. You can fire virtual shots using the touchscreen. <a href="build.html">See the BUILD guide</a>.</p>
+    <p>Allow roughly €20–35 for the board alone, depending on the seller, plus shipping and any holder or power components. <strong>Confirm V2 (Rev1.1) before buying</strong>; similar-looking revisions are not interchangeable.</p>
+    <p>You do not need programming experience. On a supported board, the <a href="install.html">INSTALL page</a> provides a USB browser installer using desktop Chrome or Edge and a USB-C <em>data</em> cable. The installer can detect the ESP32-S3 chip but cannot confirm the exact Waveshare board revision.</p>
+    <p><strong>Important:</strong> first installation or recovery can erase saved sessions and settings. Export anything worth keeping before flashing, and follow the install warnings.</p></div>
 </details>
 <details class="faq-item" id="faq-4">
-  <summary><span class="faq-number">04</span><span>Can someone with no programming experience install it?</span></summary>
-  <div class="faq-answer"><p>Yes. The <a href="install.html">INSTALL</a> page provides a USB browser installer for the supported V2 board. Use a desktop Chrome or Edge browser (Safari is not supported), a USB-C <em>data</em> cable and select the connected port when prompted. You do not need PlatformIO or coding knowledge. The installer detects the ESP32-S3 chip, but <strong>cannot automatically prove that the Waveshare board is V2</strong>. Confirm the revision before flashing.</p></div>
+  <summary><span class="faq-number">04</span><span>How realistic are the clay flights and HIT/MISS results?</span></summary>
+  <div class="faq-answer"><p>TRAPPUNK simulates clay trajectories, gun orientation and virtual shot timing using a mathematical model. That can be useful for structured practice, but it is <strong>not a certified measurement of real-world hit probability</strong>. The clay aerodynamics, shot model and transfer to actual range performance have not been independently validated. Treat virtual scores as simulator scores, not as proof of competition accuracy.</p></div>
 </details>
 <details class="faq-item" id="faq-5">
   <summary><span class="faq-number">05</span><span>Do I need Wi-Fi, a PC or an SD card to practise?</span></summary>
   <div class="faq-answer"><p>No PC, Wi-Fi or cloud account is required for ordinary standalone practice after the firmware is installed. A computer and USB connection are used for browser installation and certain data-analysis workflows. A microSD card is optional for saving or exporting supported training data. The exact available export features depend on the firmware version.</p></div>
 </details>
 <details class="faq-item" id="faq-6">
-  <summary><span class="faq-number">06</span><span>Is it a real gun, and does it fire anything?</span></summary>
-  <div class="faq-answer"><p>No. It is a <strong>non-firing electronic shooting simulator</strong>: a display, motion sensor and touchscreen shot control. There is no projectile, cartridge or shot charge. A simple dedicated wooden or cardboard stock is sufficient for the DIY design. Never handle or attach the device to a loaded firearm.</p></div>
+  <summary><span class="faq-number">06</span><span>Why is the first shot so important in Olympic Trap?</span></summary>
+  <div class="faq-answer"><p>A good first-shot hit usually means you recognized the clay's flight early enough and brought your aim onto it without unnecessary correction. The aim is a <strong>timely, smooth, controlled movement</strong>, not simply pulling the trigger faster.</p>
+    <p>Second-shot hits still count, but compare your first-shot success, reaction timing and movement across several sessions. A single 25/25 result or a quick virtual shot does not prove good technique. Keep following through after the shot instead of stopping the movement abruptly.</p></div>
 </details>
 <details class="faq-item" id="faq-7">
-  <summary><span class="faq-number">07</span><span>How realistic are the clay flights and HIT/MISS results?</span></summary>
-  <div class="faq-answer"><p>TRAPPUNK simulates clay trajectories, gun orientation and virtual shot timing using a mathematical model. That can be useful for structured practice, but it is <strong>not a certified measurement of real-world hit probability</strong>. The clay aerodynamics, shot model and transfer to actual range performance have not been independently validated. Treat virtual scores as simulator scores, not as proof of competition accuracy.</p></div>
+  <summary><span class="faq-number">07</span><span>What do CLAY C1/C2 and HIT H1/H2 actually change?</span></summary>
+  <div class="faq-answer"><p><strong>CLAY C1/C2</strong> changes the target's apparent size on the simulator screen. <strong>HIT H1/H2</strong> changes how forgiving the simulated hit zone is. These are <em>practice settings</em>, not different ISSF clay targets or real shotgun patterns.</p>
+    <p>C1 with H1 is the more demanding combination; C2 with H2 is more forgiving. Choose settings deliberately, and <strong>compare records only when both CLAY and HIT settings match</strong>. Otherwise a higher score may just mean an easier configuration.</p></div>
 </details>
 <details class="faq-item" id="faq-8">
   <summary><span class="faq-number">08</span><span>What exactly does TRAP COACH analyse?</span></summary>
   <div class="faq-answer"><p>Depending on the recorded session, TRAP COACH can display target and device-motion traces, movement onset, the time from visible clay to the first shot, first/second-shot timing and virtual hit/miss events. These are measurements within the simulator and its sensors. COACH cannot directly measure your eye movements, finger pressure on the screen, real barrel path or live-range accuracy. <a href="coach.html">Explore COACH</a>.</p></div>
 </details>
 <details class="faq-item" id="faq-9">
-  <summary><span class="faq-number">09</span><span>Will reinstalling the firmware delete my results?</span></summary>
-  <div class="faq-answer"><p><strong>It can.</strong> Browser installation or recovery may erase flash memory, stored session records and settings. Export important results to the supported SD/COACH formats and keep an independent copy before flashing. Do not assume that a successful firmware install is a non-destructive update. <a href="install.html">Read the install warnings</a>.</p></div>
+  <summary><span class="faq-number">09</span><span>Can I practise one clay direction or shoot until my first miss?</span></summary>
+  <div class="faq-answer"><p>In firmware builds that include the optional practice modes, you can repeat a <strong>left, straight or right</strong> clay flight to work on a particular movement. This is a focused drill, not a standard ISSF series.</p>
+    <p><strong>UNTIL MISS</strong> is a separate challenge: the directions follow a randomized ISSF-style sequence and the run ends at the first missed target, or after a maximum of 25 targets. Try to beat your best uninterrupted streak while keeping the same CLAY and HIT settings.</p>
+    <p>Practice-mode availability and record saving depend on the installed firmware version. These training attempts should remain separate from standard 25-target series and their results.</p></div>
 </details>
 <details class="faq-item" id="faq-10">
   <summary><span class="faq-number">10</span><span>Is TRAPPUNK open source? Can I help improve it?</span></summary>
