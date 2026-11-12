@@ -71,3 +71,9 @@ h1,h2,h3,p{margin-top:0}h1{font-size:clamp(2.65rem,5.5vw,5rem);line-height:1.06;
 .hardware-photo-link{display:block;line-height:0;border-radius:10px;overflow:hidden;background:#e6effc}
 .hardware-photo{display:block;width:100%;height:auto;aspect-ratio:960/820;object-fit:contain}
 .hardware-photo-card .small{margin:13px 2px 0}
+
+/* HOME: actual 640x172 simulator screenshot instead of illustration */
+.screen-card{padding:20px}
+.screen-shot-link{display:block;line-height:0;border-radius:10px;overflow:hidden;background:#112333}
+.screen-shot{display:block;width:100%;height:auto;aspect-ratio:640/172;object-fit:contain;image-rendering:auto;border:1px solid #355267;border-radius:10px}
+.screen-card .small{margin:12px 2px 0}
