@@ -65,3 +65,9 @@ h1,h2,h3,p{margin-top:0}h1{font-size:clamp(2.65rem,5.5vw,5rem);line-height:1.06;
 .install-finish-note{border-left:3px solid var(--orange);padding:7px 0 7px 16px;color:#c4d4de;max-width:740px}
 .install-finish-note strong{color:#fff}
 .install-support{padding:4px 0 42px}
+
+/* BUILD: real Waveshare hardware photograph replaces illustrative screen */
+.hardware-photo-card{padding:20px}
+.hardware-photo-link{display:block;line-height:0;border-radius:10px;overflow:hidden;background:#e6effc}
+.hardware-photo{display:block;width:100%;height:auto;aspect-ratio:960/820;object-fit:contain}
+.hardware-photo-card .small{margin:13px 2px 0}
