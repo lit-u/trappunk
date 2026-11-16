@@ -228,7 +228,7 @@
     }
     detail("Challenge status", statusLabels[person.status] || "Joined");
     detail("Invited by", person.invitedBy && byId.has(person.invitedBy) ? byId.get(person.invitedBy).name : "Independent start");
-    detail("Device gifted by", person.giftFrom && byId.has(person.giftFrom) ? byId.get(person.giftFrom).name : "Not recorded");
+    detail("Reported gift from", person.giftFrom && byId.has(person.giftFrom) ? byId.get(person.giftFrom).name : "Not reported");
     detail("Score", person.score || "No result recorded");
     detail("People in their branch", String(descendants(person.id)));
     panel.append(dl);
@@ -259,7 +259,7 @@
     summary.replaceChildren(el("h3", "", person.name + "'s story"));
     const note = person.giftFrom && byId.has(person.giftFrom)
       ? "Device gifted by " + byId.get(person.giftFrom).name + ". "
-      : "No device gift recorded. ";
+      : "No device gift reported. ";
     summary.append(el("p", "", "Generation " + path.length + " of " + path[0].name +
       "'s tree. " + note + "Direct descendants: " + descendants(person.id) + "."));
     summary.append(el("p", "", "Click a person below to follow another path:"));
@@ -320,7 +320,7 @@
   });
   $("shareView").addEventListener("click", () => copyText(window.location.href));
   $("copyInvite").addEventListener("click", () => copyText(
-    "I challenge you to a game of Olympic Trap with TRAPPUNK! Can you beat my score? There is no obligation to buy or pass anything on. If you want to join, let's arrange the details privately. Explore the challenge forest: https://lit-u.github.io/trappunk/challenge.html"
+    "I challenge you to try Olympic Trap with TRAPPUNK! Can you beat my score? Try it first. If you enjoy it, give your device to a friend, buy a ready-to-play one for someone else, or simply invite them to try. Nothing is required. If you want, tell us who challenged whom so the chain appears in our forest. Explore: https://lit-u.github.io/trappunk/challenge.html"
   ));
   $("copyGift").addEventListener("click", () => copyText(
     "Hello! I'd like to buy a ready-to-play TRAPPUNK device as a gift for another shooter. Could you tell me the total price, including shipping, and how payment works? The recipient can send their delivery details directly to you privately."
