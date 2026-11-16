@@ -38,8 +38,8 @@
   </div>
   <div class="challenge-workspace">
     <div class="challenge-tabs" role="tablist" aria-label="Explore genealogy">
-      <button type="button" role="tab" id="mapTab" aria-controls="mapView" aria-selected="false" data-view="map">WORLD MAP</button>
-      <button type="button" role="tab" id="forestTab" aria-controls="forestView" aria-selected="true" data-view="forest">WORLD FOREST</button>
+      <button type="button" role="tab" id="mapTab" aria-controls="mapView" aria-selected="true" data-view="map">WORLD MAP</button>
+      <button type="button" role="tab" id="forestTab" aria-controls="forestView" aria-selected="false" data-view="forest">WORLD FOREST</button>
       <button type="button" role="tab" id="treeTab" aria-controls="treeView" aria-selected="false" data-view="tree">MY TREE</button>
       <button type="button" role="tab" id="pathTab" aria-controls="pathView" aria-selected="false" data-view="path">MY PATH</button>
     </div>
@@ -49,7 +49,7 @@
       <button id="shareView" type="button" class="challenge-soft-btn">Copy view link</button>
     </div>
     <p class="small challenge-hint" id="searchHelp">Demo profiles only. Search a name, choose a person, or select a branch.</p>
-    <section id="mapView" class="challenge-view" role="tabpanel" aria-labelledby="mapTab" hidden>
+    <section id="mapView" class="challenge-view" role="tabpanel" aria-labelledby="mapTab">
       <div class="challenge-view-intro"><h3>How far has the challenge travelled?</h3>
       <p>Follow voluntarily reported cross-border invitations and device handovers, grouped by country. Lines are not shipping tracks. Fictional example data only.</p></div>
       <div class="map-filters">
@@ -70,7 +70,7 @@
       <div id="mapRoutes" class="map-routes" aria-live="polite"></div>
       <p class="small">Countries are approximate centroids, not home addresses. These are invented examples to demonstrate navigation. When thousands join, routes will remain aggregated by country pair; individual genealogy stays in MY TREE / MY PATH.</p>
     </section>
-    <section id="forestView" class="challenge-view" role="tabpanel" aria-labelledby="forestTab">
+    <section id="forestView" class="challenge-view" role="tabpanel" aria-labelledby="forestTab" hidden>
       <div class="challenge-view-intro"><h3>Independent beginnings</h3><p>People who discover TRAPPUNK on their own start new trees. One forest can have thousands of roots.</p></div>
       <div id="forestGrid" class="forest-grid"></div>
     </section>
