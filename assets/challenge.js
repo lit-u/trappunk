@@ -7,11 +7,12 @@
   const statusLabels = { invited: "Challenge sent", accepted: "Accepted", delivered: "Device received", recorded: "Result recorded" };
   const params = new URLSearchParams(window.location.search);
   let selectedId = byId.has(params.get("person")) ? params.get("person") : people[0].id;
-  let activeView = ["forest", "tree", "path"].includes(params.get("view")) ? params.get("view") : "forest";
+  let activeView = ["map", "forest", "tree", "path"].includes(params.get("view")) ? params.get("view") : "map";
 
   function parentOf(person) {
     if (person.invitedBy && byId.has(person.invitedBy)) return person.invitedBy;
     if (person.giftFrom && byId.has(person.giftFrom)) return person.giftFrom;
+    if (person.passedOnFrom && byId.has(person.passedOnFrom)) return person.passedOnFrom;
     return null;
   }
   const children = new Map(people.map((person) => [person.id, []]));
@@ -173,12 +174,13 @@
         const a = coords.get(id);
         const b = coords.get(child.id);
         const warm = child.giftFrom === id;
+        const passed = child.passedOnFrom === id;
         const path = svgEl("path", {
           d: "M" + a.x + " " + (a.y + 44) + " C" + a.x + " " + (a.y + 97) +
              " " + b.x + " " + (b.y - 93) + " " + b.x + " " + (b.y - 44),
           fill: "none",
-          stroke: warm ? "#ffc47b" : "#8accf1",
-          "stroke-width": "3.3", "stroke-dasharray": warm ? "none" : "7 5",
+          stroke: passed ? "#91e9ac" : (warm ? "#ffc47b" : "#8accf1"),
+          "stroke-width": "3.3", "stroke-dasharray": warm || passed ? "none" : "7 5",
           "stroke-linecap": "round"
         });
         svg.append(path);
@@ -228,7 +230,8 @@
     }
     detail("Challenge status", statusLabels[person.status] || "Joined");
     detail("Invited by", person.invitedBy && byId.has(person.invitedBy) ? byId.get(person.invitedBy).name : "Independent start");
-    detail("Reported gift from", person.giftFrom && byId.has(person.giftFrom) ? byId.get(person.giftFrom).name : "Not reported");
+    detail("New device gifted by", person.giftFrom && byId.has(person.giftFrom) ? byId.get(person.giftFrom).name : "Not reported");
+    if (person.passedOnFrom && byId.has(person.passedOnFrom)) detail("Own device passed on by", byId.get(person.passedOnFrom).name);
     detail("Score", person.score || "No result recorded");
     detail("People in their branch", String(descendants(person.id)));
     panel.append(dl);
@@ -246,7 +249,8 @@
       if (i) {
         const previous = path[i - 1];
         const given = member.giftFrom === previous.id;
-        const join = el("div", "path-connector" + (given ? "" : " invite"), given ? "GIFT →" : "INVITE →");
+        const passed = member.passedOnFrom === previous.id;
+        const join = el("div", "path-connector" + (given || passed ? "" : " invite"), passed ? "PASS ON →" : (given ? "GIFT →" : "INVITE →"));
         trail.append(join);
       }
       const card = el("div", "path-card" + (member.id === person.id ? " current" : ""));
@@ -257,9 +261,11 @@
     });
     const summary = $("pathSummary");
     summary.replaceChildren(el("h3", "", person.name + "'s story"));
-    const note = person.giftFrom && byId.has(person.giftFrom)
-      ? "Device gifted by " + byId.get(person.giftFrom).name + ". "
-      : "No device gift reported. ";
+    const note = person.passedOnFrom && byId.has(person.passedOnFrom)
+      ? "Previously owned device passed on by " + byId.get(person.passedOnFrom).name + ". "
+      : person.giftFrom && byId.has(person.giftFrom)
+      ? "New device gifted by " + byId.get(person.giftFrom).name + ". "
+      : "No device transfer reported. ";
     summary.append(el("p", "", "Generation " + path.length + " of " + path[0].name +
       "'s tree. " + note + "Direct descendants: " + descendants(person.id) + "."));
     summary.append(el("p", "", "Click a person below to follow another path:"));
