@@ -88,3 +88,39 @@
 @media(max-width:760px){.challenge-hero{grid-template-columns:1fr;padding:35px 0 35px;gap:0}.challenge-hero-art{max-width:520px;width:100%;min-height:220px;margin:auto}.challenge-hero-art svg{max-height:260px}.challenge-stat-row{grid-template-columns:repeat(2,1fr)}.challenge-toolbar{grid-template-columns:1fr 1fr}.challenge-soft-btn{grid-column:1/-1}.challenge-section-head{align-items:flex-start;flex-direction:column}.challenge-view{padding:17px}.legend{padding:14px 17px}.challenge-hint{padding:0 17px}}
 @media(max-width:520px){.challenge-hero h1{font-size:3.2rem}.forest-grid{grid-template-columns:1fr}.challenge-tabs{padding:7px 7px 0;justify-content:space-around}.challenge-tabs button{padding:11px 8px;font-size:.72rem}.challenge-toolbar{grid-template-columns:1fr;padding:15px 16px 0}.challenge-soft-btn{grid-column:auto}.challenge-stat-row>div{padding:16px}.challenge-stat-row strong{font-size:1.85rem}.tree-scroll{height:370px}.path-card{flex-basis:146px}.challenge-message{padding:19px}}
 @media(prefers-reduced-motion:reduce){.forest-tile{transition:none}}
+
+/* WORLD CONNECTIONS: country-level privacy-preserving genealogy */
+.challenge-tabs{align-items:center}
+.map-filters{display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap;margin:6px 0 19px}
+.map-filters>.challenge-field{flex:1 1 190px;max-width:290px}
+.map-zoom{display:flex;gap:3px;background:#0b1e2b;border:1px solid #385b66;border-radius:9px;padding:4px}
+.map-zoom button{cursor:pointer;border:0;border-radius:6px;background:transparent;color:#b4cccf;padding:10px 16px;font-weight:800;letter-spacing:.06em;font-size:.76rem}
+.map-zoom button[aria-pressed="true"]{background:#2c5148;color:#e7ffdc;box-shadow:inset 0 0 0 1px #679978}
+.map-layout{display:grid;grid-template-columns:minmax(0,1fr) 228px;gap:13px;align-items:stretch}
+.map-frame{position:relative;overflow:hidden;border:1px solid #385767;background:#081c28;border-radius:13px;min-width:0;min-height:300px}
+#connectionsSvg{display:block;width:100%;height:auto;aspect-ratio:2/1;min-height:300px}
+.map-key{position:absolute;left:12px;bottom:10px;display:flex;gap:12px;flex-wrap:wrap;color:#cee1e3;background:#091d29de;border:1px solid #315161;border-radius:8px;padding:6px 10px;font-size:.71rem}
+.map-key>span{display:flex;gap:7px;align-items:center}
+.map-line{display:inline-block;width:24px;border-top:3px solid}
+.map-line.invite{border-color:#89c9ef;border-top-style:dashed}
+.map-line.gift{border-color:#ffc27c}
+.map-line.pass{border-color:#8beaab}
+.map-info{border:1px solid #385866;border-radius:13px;background:linear-gradient(150deg,#1a3a3b,#102532);padding:21px 17px}
+.map-info h3{color:#e8f6ef;font-size:1.25rem;margin:12px 0 4px}
+.map-info p{color:#bed0d8;font-size:.85rem;margin-bottom:14px}
+.map-info-kicker{color:#b5e7c0;font-size:.7rem;font-weight:900;letter-spacing:.07em}
+.map-info-value{font-size:clamp(2.4rem,4.1vw,3.8rem);letter-spacing:-.06em;display:block;line-height:1.17;color:#ffc27c}
+.map-info .map-note{margin-top:17px;padding-top:14px;border-top:1px solid #35545e;color:#a5bec6;font-size:.76rem}
+.map-routes{margin:20px 0 16px}
+.map-routes h4{font-size:1rem;line-height:1.25;margin:0 0 13px}
+.route-grid{display:flex;flex-wrap:wrap;gap:8px}
+.route-chip{display:inline-flex;align-items:center;gap:7px;cursor:pointer;font:inherit;font-size:.77rem;color:#e3f1ee;background:#183641;border:1px solid #3c6070;border-radius:50px;padding:8px 12px}
+.route-chip:hover{border-color:#91d4b5;background:#244d4c}
+.route-mark{display:inline-block;width:9px;height:9px;border-radius:50%;background:#8accf1;flex:none}
+.route-mark.invited{background:#89c9ef}
+.route-mark.gifted{background:#ffc27c}
+.route-mark.passed{background:#8beaab}
+.legend-line.pass{border-color:#8beaab}
+.path-connector:not(.invite){color:#ace8b4}
+@media(max-width:980px){.map-layout{grid-template-columns:1fr}.map-info{display:grid;grid-template-columns:1fr 1fr;gap:0 14px;align-items:center}.map-info h3{margin:0}.map-info-value{grid-row:span 2}.map-info .map-note{grid-column:1/-1}}
+@media(max-width:580px){.map-filters>.challenge-field{max-width:none;flex:1 1 100%}.map-zoom{width:100%}.map-zoom button{flex:1}.map-frame{min-height:190px}#connectionsSvg{min-height:210px}.map-key{left:5px;right:5px;bottom:5px;gap:7px;font-size:.63rem;justify-content:space-evenly;padding:5px}.map-key .map-line{width:15px}.map-info{display:block}.map-info h3{margin:10px 0 4px}.map-info-value{font-size:2.6rem}}
