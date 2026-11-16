@@ -14,7 +14,7 @@ Once GitHub Pages is enabled: https://lit-u.github.io/trappunk/
 - Build: `build.html`
 - Coach: `coach.html`
 - FAQ: `faq.html` — 10 expandable questions, no JavaScript required
-- Community: `community.html`
+- Community: `community.html`\n- Challenge Forest: `challenge.html` — static concept preview with fictional data and interactive WORLD FOREST, MY TREE and MY PATH views
 
 ## Discussions
 Enable **Settings → General → Features → Discussions** in this repository. Then the community link will open https://github.com/lit-u/trappunk/discussions.
@@ -36,3 +36,4 @@ Firmware installation is not currently offered on the public website. Interested
 ## Edit FAQ questions
 
 Open [`faq.html`](faq.html) or the [GitHub editor](https://github.com/lit-u/trappunk/edit/main/faq.html). Find the section between `<!-- FAQ ITEMS START -->` and `<!-- FAQ ITEMS END -->`. Each question is inside `<summary>`, each answer is inside `<div class="faq-answer">`. Commit to `main` to publish the edits.
+\n## Challenge Forest prototype\n\nThe challenge genealogy explorer is entirely static. Sample participants and links are embedded inside `challenge.html` and labeled as **illustrative data**. Invitations and device gifts are separate fields (`invitedBy`, `giftFrom`). Independently joined players begin new trees. Browser interactions do not register real participants or accept payment. Before production, replace the demo dataset with a privacy-reviewed database and a branch/pagination API for large networks; provide consent and account/order processes separately. Delivery addresses should be handled privately, never shown in the tree.\n
