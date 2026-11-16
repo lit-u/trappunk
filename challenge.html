@@ -38,6 +38,7 @@
   </div>
   <div class="challenge-workspace">
     <div class="challenge-tabs" role="tablist" aria-label="Explore genealogy">
+      <button type="button" role="tab" id="mapTab" aria-controls="mapView" aria-selected="false" data-view="map">WORLD MAP</button>
       <button type="button" role="tab" id="forestTab" aria-controls="forestView" aria-selected="true" data-view="forest">WORLD FOREST</button>
       <button type="button" role="tab" id="treeTab" aria-controls="treeView" aria-selected="false" data-view="tree">MY TREE</button>
       <button type="button" role="tab" id="pathTab" aria-controls="pathView" aria-selected="false" data-view="path">MY PATH</button>
@@ -48,6 +49,27 @@
       <button id="shareView" type="button" class="challenge-soft-btn">Copy view link</button>
     </div>
     <p class="small challenge-hint" id="searchHelp">Demo profiles only. Search a name, choose a person, or select a branch.</p>
+    <section id="mapView" class="challenge-view" role="tabpanel" aria-labelledby="mapTab" hidden>
+      <div class="challenge-view-intro"><h3>How far has the challenge travelled?</h3>
+      <p>Follow voluntarily reported cross-border invitations and device handovers, grouped by country. Lines are not shipping tracks. Fictional example data only.</p></div>
+      <div class="map-filters">
+        <label class="challenge-field">Connection type
+          <select id="mapType"><option value="all">All reported links</option><option value="invited">Challenge invitations</option><option value="gifted">New devices gifted</option><option value="passed">Own devices passed on</option></select>
+        </label>
+        <label class="challenge-field">Focus country
+          <select id="mapCountry"><option value="all">All countries</option></select>
+        </label>
+        <div class="map-zoom" role="group" aria-label="Map zoom"><button type="button" data-mapzoom="world" aria-pressed="true">WORLD</button><button type="button" data-mapzoom="europe" aria-pressed="false">EUROPE</button></div>
+      </div>
+      <div class="map-layout">
+        <div class="map-frame"><svg id="connectionsSvg" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="World map of aggregated international challenge links"></svg>
+          <div class="map-key"><span><i class="map-line invite"></i>Invitation</span><span><i class="map-line gift"></i>New gift</span><span><i class="map-line pass"></i>Passed on</span></div>
+        </div>
+        <aside id="mapInfo" class="map-info" aria-live="polite"></aside>
+      </div>
+      <div id="mapRoutes" class="map-routes" aria-live="polite"></div>
+      <p class="small">Countries are approximate centroids, not home addresses. These are invented examples to demonstrate navigation. When thousands join, routes will remain aggregated by country pair; individual genealogy stays in MY TREE / MY PATH.</p>
+    </section>
     <section id="forestView" class="challenge-view" role="tabpanel" aria-labelledby="forestTab">
       <div class="challenge-view-intro"><h3>Independent beginnings</h3><p>People who discover TRAPPUNK on their own start new trees. One forest can have thousands of roots.</p></div>
       <div id="forestGrid" class="forest-grid"></div>
@@ -65,7 +87,7 @@
       <div class="challenge-view-intro"><h3>Where did my challenge come from?</h3><p>Follow a single person back to the first recorded member of the tree. Only voluntarily reported invitations and gifts appear here.</p></div>
       <div id="pathTrail" class="path-trail"></div><div id="pathSummary" class="path-summary"></div>
     </section>
-    <div class="legend" aria-label="Connection legend"><span><i class="legend-line gift"></i> Device gifted</span><span><i class="legend-line invite"></i> Challenge only</span><span><i class="legend-root"></i> Independent start</span></div>
+    <div class="legend" aria-label="Connection legend"><span><i class="legend-line gift"></i> Device gifted</span><span><i class="legend-line invite"></i> Challenge only</span><span><i class="legend-line pass"></i> Own device passed on</span><span><i class="legend-root"></i> Independent start</span></div>
   </div>
 </section>
 <section id="join" class="challenge-section challenge-join" aria-labelledby="join-title"><p class="eyebrow">THE GOODWILL CHAIN</p><h2 id="join-title">You don't have to buy.<br><em>You can just play.</em></h2><p class="lead">Try a device. If you like it, you can buy a ready-to-play one for a friend, hand over your own, or just tell someone about the game. All three are welcome, and none is required. If buying a new device, arrange payment and shipping privately with the seller.</p>
@@ -88,7 +110,13 @@
 {"id":"ruta","name":"Rūta","country":"Latvia","origin":"independent","invitedBy":null,"giftFrom":null,"status":"recorded","score":"20/25"},
 {"id":"kai","name":"Kai","country":"Finland","invitedBy":"ruta","giftFrom":"ruta","status":"accepted","score":null},
 {"id":"mina","name":"Mina","country":"Denmark","origin":"independent","invitedBy":null,"giftFrom":null,"status":"accepted","score":null},
-{"id":"theo","name":"Theo","country":"Netherlands","invitedBy":"mina","giftFrom":null,"status":"invited","score":null}
+{"id":"theo","name":"Theo","country":"Netherlands","invitedBy":"mina","giftFrom":null,"status":"invited","score":null},
+{"id":"maya","name":"Maya","country":"United States","invitedBy":"noah","giftFrom":"noah","status":"recorded","score":"20/25"},
+{"id":"akira","name":"Akira","country":"Japan","invitedBy":"olivia","giftFrom":null,"status":"accepted","score":null},
+{"id":"sofia","name":"Sofia","country":"Brazil","invitedBy":"lucas","giftFrom":"lucas","status":"delivered","score":null},
+{"id":"nomsa","name":"Nomsa","country":"South Africa","invitedBy":"anna","giftFrom":null,"passedOnFrom":"anna","status":"accepted","score":null},
+{"id":"lucy","name":"Lucy","country":"Australia","invitedBy":"kai","giftFrom":null,"status":"recorded","score":"18/25"}
 ]</script>
 <script src="assets/challenge.js" defer></script>
+<script src="assets/challenge-map.js" defer></script>
 </body></html>
