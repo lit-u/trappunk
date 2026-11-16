@@ -7,7 +7,7 @@
   const statusLabels = { invited: "Challenge sent", accepted: "Accepted", delivered: "Device received", recorded: "Result recorded" };
   const params = new URLSearchParams(window.location.search);
   let selectedId = byId.has(params.get("person")) ? params.get("person") : people[0].id;
-  let activeView = ["map", "forest", "tree", "path"].includes(params.get("view")) ? params.get("view") : "forest";
+  let activeView = ["map", "forest", "tree", "path"].includes(params.get("view")) ? params.get("view") : "map";
 
   function parentOf(person) {
     if (person.invitedBy && byId.has(person.invitedBy)) return person.invitedBy;
