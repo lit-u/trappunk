@@ -14,8 +14,8 @@
 <section class="challenge-hero" aria-labelledby="challenge-title">
   <div class="challenge-hero-copy">
     <span class="pill">CHALLENGE FOREST · PUBLIC CONCEPT</span>
-    <h1 id="challenge-title">One gift.<br><em>Many stories.</em></h1>
-    <p class="lead">A shooter challenges another. Someone sends a ready-to-play TRAPPUNK device as a gift. The next person can pass the challenge on, or simply enjoy playing. No obligation. Every connection has its own story.</p>
+    <h1 id="challenge-title">Try it.<br><em>Pass it on.</em></h1>
+    <p class="lead">A shooter challenges another. Try TRAPPUNK first. If you enjoy it, you can gift a new device to a friend, pass along your own, or simply keep playing. No obligation. Every reported connection has its own story.</p>
     <div class="btns"><a class="btn primary" href="#explorer">Explore the forest</a><a class="btn" href="#join">Pass on a challenge</a></div>
     <p class="small">An idea in development. No purchases or registrations are available on this page yet.</p>
   </div>
@@ -53,7 +53,7 @@
       <div id="forestGrid" class="forest-grid"></div>
     </section>
     <section id="treeView" class="challenge-view" role="tabpanel" aria-labelledby="treeTab" hidden>
-      <div class="challenge-view-intro"><h3 id="treeTitle">A challenge tree</h3><p>Warm links show gifted devices; blue links show invitations without a gift. Select any shooter to inspect the connection.</p></div>
+      <div class="challenge-view-intro"><h3 id="treeTitle">A challenge tree</h3><p>Warm links show reported gifts; blue links show invitations without a reported gift. Select any shooter to inspect the connection. Private handovers are not automatically tracked.</p></div>
       <div class="tree-controls"><label for="treeRoot">Tree origin</label><select id="treeRoot"></select><span id="treeCount" class="small"></span></div>
       <div class="tree-layout">
         <div class="tree-scroll" tabindex="0" aria-label="Scrollable challenge genealogy"><svg id="treeSvg" role="img" aria-label="Interactive challenge genealogy" xmlns="http://www.w3.org/2000/svg"></svg></div>
@@ -62,16 +62,16 @@
       <p class="small tree-scale-note">For large forests, the live version will load one branch at a time. This prototype draws only a small demonstration tree.</p>
     </section>
     <section id="pathView" class="challenge-view" role="tabpanel" aria-labelledby="pathTab" hidden>
-      <div class="challenge-view-intro"><h3>Where did my challenge come from?</h3><p>Follow a single person back to the first member of the tree. Gifts are recorded separately from invitations.</p></div>
+      <div class="challenge-view-intro"><h3>Where did my challenge come from?</h3><p>Follow a single person back to the first recorded member of the tree. Only voluntarily reported invitations and gifts appear here.</p></div>
       <div id="pathTrail" class="path-trail"></div><div id="pathSummary" class="path-summary"></div>
     </section>
     <div class="legend" aria-label="Connection legend"><span><i class="legend-line gift"></i> Device gifted</span><span><i class="legend-line invite"></i> Challenge only</span><span><i class="legend-root"></i> Independent start</span></div>
   </div>
 </section>
-<section id="join" class="challenge-section challenge-join" aria-labelledby="join-title"><p class="eyebrow">THE GOODWILL CHAIN</p><h2 id="join-title">You don't have to buy.<br><em>You can just play.</em></h2><p class="lead">Accept a challenge, share a result, or invite somebody else. If you choose to gift a ready-to-play device, the seller arranges payment and shipping privately. The recipient decides whether to continue.</p>
-  <div class="cards challenge-steps"><div class="card"><p class="number">01 · CHALLENGE</p><h3>Invite a person</h3><p>Send a friendly challenge through email or Facebook. They can say yes, no, or simply try it.</p></div><div class="card"><p class="number">02 · GIFT (OPTIONAL)</p><h3>Give them a start</h3><p>Buy a prepared board for somebody else. The recipient privately shares their delivery address with the seller.</p></div><div class="card"><p class="number">03 · GROW</p><h3>Leave a trace</h3><p>Record who invited whom and, separately, who sent the gift. Independent players start their own trees.</p></div></div>
+<section id="join" class="challenge-section challenge-join" aria-labelledby="join-title"><p class="eyebrow">THE GOODWILL CHAIN</p><h2 id="join-title">You don't have to buy.<br><em>You can just play.</em></h2><p class="lead">Try a device. If you like it, you can buy a ready-to-play one for a friend, hand over your own, or just tell someone about the game. All three are welcome, and none is required. If buying a new device, arrange payment and shipping privately with the seller.</p>
+  <div class="cards challenge-steps"><div class="card"><p class="number">01 · CHALLENGE</p><h3>Invite a person</h3><p>Send a friendly challenge through email or Facebook. They can say yes, no, or simply try it.</p></div><div class="card"><p class="number">02 · SHARE (OPTIONAL)</p><h3>New or passed on</h3><p>Buy a ready-to-play board for a friend, pass on your own, or invite them to get one themselves. No purchase is required.</p></div><div class="card"><p class="number">03 · GROW</p><h3>Leave a trace, if you wish</h3><p>Tell us who challenged whom so the forest can grow. Private handovers we never hear about stay outside the public tree.</p></div></div>
   <div class="challenge-message"><div><h3>Start with a message.</h3><p>Copy an invitation and send it using your own email or Facebook account. No public address forms.</p></div><div class="challenge-message-actions"><button type="button" class="btn primary" id="copyInvite">Copy challenge invitation</button><button type="button" class="btn" id="copyGift">Copy gift request</button></div></div>
-  <p class="small">Preview only: there is no checkout, personal-data collection or official challenge registration yet. <a href="https://github.com/lit-u/trappunk/discussions">Project Discussions</a></p><p class="small" id="copyStatus" role="status" aria-live="polite"></p>
+  <p class="small">The forest will show only voluntarily reported connections, not every device handover. Preview only: there is no checkout, personal-data collection or official challenge registration yet. <a href="https://github.com/lit-u/trappunk/discussions">Project Discussions</a></p><p class="small" id="copyStatus" role="status" aria-live="polite"></p>
 </section>
 </main>
 <footer class="footer"><div class="wrap foot"><div><strong>TRAPPUNK</strong> · Olympic Trap Gyro Simulator<br>Independent project, not affiliated with IOC or ISSF.</div><div class="links"><a href="https://github.com/lit-u/trappunk">GitHub</a><a href="https://github.com/lit-u/olympic-trap-coach-rag">Coach RAG</a><a href="community.html">Community</a></div></div></footer>
