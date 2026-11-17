@@ -1,0 +1,13 @@
+.sale-product{display:grid;grid-template-columns:1.2fr 1fr;gap:22px;align-items:start;padding-bottom:38px}
+.sale-product .card{height:100%}
+.sale-image{background:#0e202d;border:1px solid #304a5b;border-radius:12px;padding:18px}
+.sale-image img{width:100%;height:auto;display:block;border:1px solid #456377;border-radius:9px}
+.sale-image p{margin:13px 0 0}
+.sale-price{font-size:clamp(1.5rem,3vw,2.3rem)!important;color:#f0f5f7!important;font-weight:800;margin:20px 0 4px}
+.sales-options .card{display:flex;flex-direction:column}
+.sales-options .btn{margin-top:auto;align-self:start}
+.sale-status{max-width:780px}
+.sale-legal{max-width:790px}
+.sale-legal p{color:#c4d4de}
+@media(max-width:900px){.sale-product{grid-template-columns:1fr}}
+[hidden]{display:none!important}
