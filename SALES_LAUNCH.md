@@ -39,7 +39,7 @@ and no storage of credit cards are needed.
 
 ## Details REQUIRED BEFORE LIVE SALES
 
-1. Announced bundle: **€99 for one tested ESP32-S3 TrapFan device with a cardboard holder; no microSD card**. Power-source details, included accessories, charging safety, packaging, supported hardware revision and buyer instructions must be confirmed before enabling checkout. No unverified power-source specifications or runtime claims.
+1. Announced bundle: **€99 for one tested, ready-to-use ESP32-S3 TrapFan device with an included battery and cardboard holder; no microSD card**. Exact battery type/capacity, charging safety, packaging, included cables, supported hardware revision and buyer instructions must be confirmed before enabling checkout. Do not advertise unverified battery runtime.
 2. Announced selling price: **€99 per bundle**. Before enabling payments, verify applicable tax treatment, delivery rates, destination countries, lead time and stock. Shipping is extra and must be clear to buyers; never invent charges or lead times.
 3. Seller's legally required name/business details and contact channel.
    Explicit permission needed before publishing private contact data.
