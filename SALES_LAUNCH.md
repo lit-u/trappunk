@@ -39,10 +39,8 @@ and no storage of credit cards are needed.
 
 ## Details REQUIRED BEFORE LIVE SALES
 
-1. Sellable package defined: hardware revision, whether the holder, case,
-   power source, SD card and charging cable are included or not.
-2. Final selling price in EUR, tax status, delivery rates, destination
-   countries, lead time and available stock. Never invent them.
+1. Announced bundle: **€99 for one tested ESP32-S3 TrapFan device with a battery and cardboard holder; no microSD card**. Still confirm battery type/capacity, whether any cable or enclosure is included, charging safety, packaging, supported revision and exact buyer instructions. Avoid unverified battery runtime claims.
+2. Announced selling price: **€99 per bundle**. Before enabling payments, verify applicable tax treatment, delivery rates, destination countries, lead time and stock. Shipping is extra and must be clear to buyers; never invent charges or lead times.
 3. Seller's legally required name/business details and contact channel.
    Explicit permission needed before publishing private contact data.
 4. Payment acceptance/verified Stripe account and two real Payment Links.

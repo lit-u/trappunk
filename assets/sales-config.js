@@ -3,7 +3,7 @@
 window.TRAPFAN_SALES = Object.freeze({
   enabled: false,
   currency: "EUR",
-  unitPrice: null,
+  unitPrice: 99,
   shipToMeStripeUrl: "",
   giftStripeUrl: "",
   stockLabel: "Availability confirmed before purchase"

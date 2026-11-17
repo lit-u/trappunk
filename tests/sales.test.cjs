@@ -27,6 +27,7 @@ function render(salesConfig) {
 }
 
 assert.match(config, /enabled:\s*false/);
+assert.match(config, /unitPrice:\s*99/);
 let result = render({ enabled: false, unitPrice: null,
   shipToMeStripeUrl: "", giftStripeUrl: "" });
 assert.equal(result.checkoutSelf.hidden, true);
@@ -71,4 +72,9 @@ assert.match(order, /SHIP TO A FRIEND/);
 assert.match(order, /PASS ON MY DEVICE/);
 assert.match(order, /privately with the seller/);
 assert.match(order, /No payment or order is being accepted/);
+assert.match(order, /€99/);
+assert.match(order, /battery and a cardboard holder/);
+assert.match(order, /microSD card/);
+assert.match(order, /Shipping is additional/);
+assert.doesNotMatch(order, /holder or SD card is not promised/);
 console.log("PASS: staged Stripe checkout stays closed until all required public settings are ready.");
