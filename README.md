@@ -1,12 +1,14 @@
-# TRAPPUNK
+# TrapFan
 **Olympic Trap Gyro Simulator**
 
 Public project website for a low-cost, ESP32-S3-based Olympic Trap training simulator.
 
-**Status:** Public TRAPPUNK information site. Browser installation is not offered. The simulator firmware and its source remain private.
+**Status:** Public TrapFan information site. Browser installation is not offered. The simulator firmware and its source remain private.
 
 ## Website
-Once GitHub Pages is enabled: https://lit-u.github.io/trappunk/
+Live production website: https://trapfan.com/ (deployed on Vercel from main).
+
+Legacy GitHub Pages address (may still be available): https://lit-u.github.io/trappunk/
 
 ## Pages
 - Home: `index.html`

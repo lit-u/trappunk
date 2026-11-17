@@ -326,10 +326,10 @@
   });
   $("shareView").addEventListener("click", () => copyText(window.location.href));
   $("copyInvite").addEventListener("click", () => copyText(
-    "I challenge you to try Olympic Trap with TRAPPUNK! Can you beat my score? Try it first. If you enjoy it, give your device to a friend, buy a ready-to-play one for someone else, or simply invite them to try. Nothing is required. If you want, tell us who challenged whom so the chain appears in our forest. Explore: https://lit-u.github.io/trappunk/challenge.html"
+    "I challenge you to try Olympic Trap with TrapFan! Can you beat my score? Try it first. If you enjoy it, give your device to a friend, buy a ready-to-play one for someone else, or simply invite them to try. Nothing is required. If you want, tell us who challenged whom so the chain appears in our forest. Explore: https://trapfan.com/challenge.html"
   ));
   $("copyGift").addEventListener("click", () => copyText(
-    "Hello! I'd like to buy a ready-to-play TRAPPUNK device as a gift for another shooter. Could you tell me the total price, including shipping, and how payment works? The recipient can send their delivery details directly to you privately."
+    "Hello! I'd like to buy a ready-to-play TrapFan device as a gift for another shooter. Could you tell me the total price, including shipping, and how payment works? The recipient can send their delivery details directly to you privately."
   ));
   render();
 })();
