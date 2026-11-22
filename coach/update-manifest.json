@@ -1,0 +1,17 @@
+{
+  "schema": "trapfan-coach-ui-update",
+  "version": "1.0.1",
+  "description": "Remove obsolete TGA wording from COACH import labels",
+  "patches": [
+    {
+      "id": "importBtn",
+      "from": "IMPORT TGA / JSON / HTML",
+      "to": "IMPORT JSON / HTML"
+    },
+    {
+      "id": "importHelp",
+      "from": "Import .TGA, RESULTS_ALL JSON",
+      "to": "Import RESULTS_ALL JSON"
+    }
+  ]
+}
