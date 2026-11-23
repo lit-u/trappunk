@@ -3,7 +3,7 @@
   "version": "1.2.1",
   "description": "Prompt-only standalone COACH UI; supports safe update download without RAG content",
   "html_url": "https://raw.githubusercontent.com/lit-u/trappunk/main/coach/ui-1.2.1.html",
-  "sha256": "f31f001cf473bfdb0449c9ab59da184c88f3ed8728173bf4296fa5f3b5fc850c",
+  "sha256": "628cd66537655f3dcb1d45bc80a04e0037370d6df8ef44ba7aeada3fa03b3369",
   "patches": [
     {
       "id": "importBtn",
