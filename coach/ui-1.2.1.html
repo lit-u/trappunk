@@ -112,8 +112,11 @@ footer{margin:25px 0;color:#a0aeb2}#note{width:100%;min-height:55px}
 @media print{body{background:white!important}.claim-sheet{box-shadow:none;break-inside:avoid}}
 </style></head><body>
 <header><h1>TrapFan COACH</h1><label id="officialSeriesPicker">Official SERIES <select id="round"></select></label>
-<button id="deleteSeries" type="button" title="Remove only the selected SERIES from this local COACH">DELETE SERIES</button></header>
+<button id="deleteSeries" type="button" title="Remove only the selected SERIES from this local COACH">DELETE SERIES</button>
+<button id="coachCheckUpdate" type="button">CHECK UPDATE</button>
+<button id="coachApplyUpdate" type="button" hidden>UPDATE COACH</button></header>
 <p id="deviceRunSummary" role="status" class="muted">ISSF, HIT, CLAY and session type appear below. Training is NOT SERIES.</p>
+<p id="coachUpdateStatus" class="muted" role="status">CHECK UPDATE checks for a new COACH UI only when clicked. No personal results leave this file.</p>
 <nav class="tabs">
 <button type="button" data-tab="results" class="active">RESULTS</button>
 <button type="button" data-tab="trajectory">TRAJECTORY</button>
@@ -313,11 +316,9 @@ Take a screenshot or share the HTML. This is a friendly, self-reported game.</p>
 <div class="actions"><button id="importBtn" type="button">IMPORT JSON / HTML</button>
 <button id="saveBtn" type="button">SAVE HTML</button>
 <button id="jsonBtn" type="button">EXPORT JSON</button>
-<button id="coachCheckUpdate" type="button">CHECK UPDATE</button>
-<button id="coachApplyUpdate" type="button" hidden>UPDATE COACH</button>
 <input id="file" type="file" accept=".tga,.json,.html,.htm,application/json,text/html" hidden></div>
 <p class="muted">Import RESULTS_ALL JSON (including separate training sessions), rounds.json, coach-motion.json or saved COACH HTML. SAVE HTML preserves official and training histories.</p>
-<p id="coachUpdateStatus" class="muted" role="status">COACH updates are checked only when you press CHECK UPDATE. Original files remain untouched.</p></details>
+</details>
 <footer>Green I = HIT · Red O = MISS · 2 = second barrel. Original outcomes are read-only. Movement traces are not yet included in RESULTS exports.</footer>
 <script id="coach-data" type="application/json">{"schema":"trap-coach-export","version":1,"rounds":[],"training_sessions":[],"motion":null,"motion_archives":[],"saved_at":null}</script>
 <script id="rag-data" type="application/json">{"schema":"trap-coach-rag","version":1,"rag_version":"prompt-only","sha256":"","url":"","chunks":[],"sources":{}}</script>
