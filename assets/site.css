@@ -204,3 +204,10 @@ h1,h2,h3,p{margin-top:0}h1{font-size:clamp(2.65rem,5.5vw,5rem);line-height:1.06;
 @media(max-width:900px){.achievement-classes{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){.hit-order{grid-template-columns:repeat(2,minmax(0,1fr))}.hit-order>div{padding:10px}.hit-order strong{font-size:.76rem}.hit-order code{font-size:.84rem}}
 @media(max-width:400px){.achievement-classes{grid-template-columns:1fr}.hit-order{grid-template-columns:1fr}}
+
+/* Unified COACH guide: cards, HIT diagram and stars on one page */
+.hit-guide-in-classes{background:#102330;border:1px solid #355467;border-radius:13px;padding:clamp(12px,2vw,20px);margin:21px 0 24px}
+.hit-guide-in-classes h3{font-size:1.15rem;color:#e6c56b;letter-spacing:.06em;margin:0 0 10px}
+.hit-guide-in-classes .hit-zones-figure{margin:15px 0}
+.hit-guide-in-classes .hit-zones-figure>img{width:100%;height:auto;object-fit:contain}
+.hit-guide-in-classes .hit-guide-note{margin:14px 0 9px}
