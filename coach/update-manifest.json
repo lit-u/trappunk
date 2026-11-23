@@ -1,9 +1,9 @@
 {
   "schema": "trapfan-coach-ui-release",
-  "version": "1.2.1",
-  "description": "Prompt-only standalone COACH UI; supports safe update download without RAG content",
-  "html_url": "https://raw.githubusercontent.com/lit-u/trappunk/main/coach/ui-1.2.1.html",
-  "sha256": "628cd66537655f3dcb1d45bc80a04e0037370d6df8ef44ba7aeada3fa03b3369",
+  "version": "1.2.2",
+  "description": "COACH UI update: visible 3–5 star roadmap, prompt-only, no private RAG and no user data",
+  "html_url": "https://raw.githubusercontent.com/lit-u/trappunk/main/coach/ui-1.2.2.html",
+  "sha256": "83506f9c144f7455baa3be23f702f2684f4fd8cc66cdb0baf2003deb80db09cc",
   "patches": [
     {
       "id": "importBtn",
