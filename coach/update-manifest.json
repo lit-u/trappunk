@@ -1,9 +1,9 @@
 {
   "schema": "trapfan-coach-ui-release",
-  "version": "1.2.4",
-  "description": "COACH offline favicon.ico embedded; five-star table, prompt-only UI",
-  "html_url": "https://raw.githubusercontent.com/lit-u/trappunk/main/coach/ui-1.2.4.html",
-  "sha256": "0f03c883172dd94b2b2c7e9562fb70b1857410387abe1bccec8810f50792789b",
+  "version": "1.2.6",
+  "description": "Correct H2 FAN / H3 FUNNY class and star mapping, plus six HIT zones; no user data or full RAG",
+  "html_url": "https://raw.githubusercontent.com/lit-u/trappunk/main/coach/ui-1.2.6.html",
+  "sha256": "f9061f1f35e62f93f7469b9f37ff8132aa5d5bcfde9f8a57cf0730c02e9d460a",
   "patches": [
     {
       "id": "importBtn",
