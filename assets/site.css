@@ -173,3 +173,34 @@ h1,h2,h3,p{margin-top:0}h1{font-size:clamp(2.65rem,5.5vw,5rem);line-height:1.06;
 .brand{max-width:100%;flex:0 0 auto}
 .brand-logo{display:block;width:252px;max-width:100%;height:auto}
 @media(max-width:580px){.brand-logo{width:232px}}
+
+/* COACH: H/C zones and five-level recreational achievement guide */
+.hit-guide h3{margin-top:24px}
+.hit-zones-figure{margin:23px 0 17px;padding:13px;border:1px solid #355467;background:#0d1b26;border-radius:16px}
+.hit-zones-figure>img{display:block;width:100%;height:auto;max-width:900px;margin:auto;border-radius:10px;background:#101b24}
+.hit-zones-figure figcaption{display:flex;gap:12px 22px;align-items:center;justify-content:center;flex-wrap:wrap;color:#a9c6d4;margin:14px 4px 3px;font-size:.84rem}
+.hit-legend{display:inline-flex;align-items:center;gap:6px}
+.hit-key{display:inline-block;width:12px;height:12px;border-radius:50%}
+.hit-key--orange{background:#ff7a1a}.hit-key--blue{background:#39a9d7}
+.hit-guide-note{max-width:1020px;color:#c2d2db;background:#142938;padding:14px 18px;border-left:3px solid #59c4e8;margin:16px 0 22px}
+.hit-order{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.hit-order>div{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:13px 16px;background:#192c38;border:1px solid #365466;border-radius:9px}
+.hit-order strong{color:#edf3f6;font-size:.92rem}.hit-order code{color:#5acff2;font-size:1rem;font-weight:800}
+.achievement-classes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:22px 0}
+.achievement-class{--achievement:#c9d1d7;min-width:0;background:#172932;border:1px solid #355467;border-top:4px solid var(--achievement);padding:17px 14px;border-radius:10px}
+.achievement-class--master{--achievement:#e5bd55}.achievement-class--pro{--achievement:#c2d0d5}
+.achievement-class--fan{--achievement:#44ccf5}.achievement-class--funny{--achievement:#f16eb6}
+.achievement-class .achievement-emblem{display:block;height:42px;line-height:1;font-size:43px;color:var(--achievement)}
+.achievement-class--pro .achievement-emblem{color:#030406;-webkit-text-stroke:1.7px #c2d0d5}
+.achievement-class h3{font-size:1.12rem;letter-spacing:.07em;margin:8px 0 5px}
+.achievement-class p{font-size:.82rem;color:#c3d2d9;margin:8px 0 0}
+.achievement-class .achievement-code{font-weight:850;color:#fff;font-size:.92rem;overflow-wrap:anywhere}
+.achievement-table-wrap{max-width:100%;overflow-x:auto}
+.achievement-table{border-collapse:collapse;width:100%;min-width:540px}
+.achievement-table th,.achievement-table td{padding:12px 10px;border-bottom:1px solid #304d5c;text-align:left}
+.achievement-table th{font-size:.75rem;color:#9ec4d7;letter-spacing:.07em}
+.achievement-table td:first-child{color:#e7c46b;font-weight:800;white-space:nowrap}
+.achievement-table td:last-child{font-size:.79rem;letter-spacing:.04em}
+@media(max-width:900px){.achievement-classes{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.hit-order{grid-template-columns:repeat(2,minmax(0,1fr))}.hit-order>div{padding:10px}.hit-order strong{font-size:.76rem}.hit-order code{font-size:.84rem}}
+@media(max-width:400px){.achievement-classes{grid-template-columns:1fr}.hit-order{grid-template-columns:1fr}}
