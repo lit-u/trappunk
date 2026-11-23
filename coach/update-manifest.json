@@ -1,7 +1,9 @@
 {
-  "schema": "trapfan-coach-ui-update",
-  "version": "1.0.1",
-  "description": "Remove obsolete TGA wording from COACH import labels",
+  "schema": "trapfan-coach-ui-release",
+  "version": "1.2.1",
+  "description": "Prompt-only standalone COACH UI; supports safe update download without RAG content",
+  "html_url": "https://raw.githubusercontent.com/lit-u/trappunk/main/coach/ui-1.2.1.html",
+  "sha256": "f31f001cf473bfdb0449c9ab59da184c88f3ed8728173bf4296fa5f3b5fc850c",
   "patches": [
     {
       "id": "importBtn",
